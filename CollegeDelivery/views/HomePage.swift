@@ -10,42 +10,58 @@ import SwiftUI
 struct HomePage: View {
     var body: some View {
         NavigationView {
-            VStack(spacing: 20) {
-                Spacer()
-                
-                NavigationLink(destination: ItemListingPage()) {
-                    Text("Search for an Item")
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+            ScrollView {
+                LazyVGrid(columns: [GridItem(.flexible(minimum: 100, maximum: 200)), GridItem(.flexible(minimum: 100, maximum: 200))], spacing: 16) {
+                    
+                    // Manually create NavigationLink buttons with icon and text
+                    NavigationLink(destination: ItemListingPage()) {
+                        VStack(spacing: 8) {
+                            Image(systemName: "magnifyingglass")
+                                .font(.system(size: 54))
+                            Text("Search for an Item")
+                        }
+                    } .buttonStyle(RoundedButtonStyle())
+                    
+                    NavigationLink(destination: PostItemPage()) {
+                        VStack(spacing: 8) {
+                            Image(systemName: "tray.and.arrow.up")
+                                .font(.system(size: 54))
+                            Text("Post New Item")
+                        }
+                    } .buttonStyle(RoundedButtonStyle())
+                    
+                    NavigationLink(destination: RequestsManagementPage()) {
+                        VStack(spacing: 8) {
+                            Image(systemName: "tray.full.fill")
+                                .font(.system(size: 54))
+                            Text("Requested Items")
+                        }
+                    } .buttonStyle(RoundedButtonStyle())
+                    
+                    NavigationLink(destination: PostItemPage()) {
+                        VStack(spacing: 8) {
+                            Image(systemName: "map.fill")
+                                .font(.system(size: 54))
+                            Text("Map")
+                        }
+                    } .buttonStyle(RoundedButtonStyle())
                 }
-                .padding(.horizontal)
-
-                NavigationLink(destination: PostItemPage()) {
-                    Text("Lend an Item")
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.green)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-                .padding(.horizontal)
-
-                NavigationLink(destination: RequestsManagementPage()) {
-                    Text("My Requests")
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.orange)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-                .padding(.horizontal)
-
-                Spacer()
+                .padding()
             }
-            .navigationBarTitle("Home")
+            .navigationTitle("Sheridan Lending App")
         }
+    }
+}
+
+struct RoundedButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding(16)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(10)
+            .scaleEffect(configuration.isPressed ? 0.95 : 1.0)
+            .aspectRatio(1.0, contentMode: .fit)
     }
 }

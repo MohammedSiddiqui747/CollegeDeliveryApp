@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyCRJyS4L4k-FQCtbw0tKr3kng3okH-nHU4</string>
+	<string>AIzaSyA0Vl9hYZNB_1lA3PzoTi6KUQ9X22Kd_VA</string>
 	<key>GCM_SENDER_ID</key>
-	<string>768911303215</string>
+	<string>656021875798</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.jk.FirestoreDemo</string>
+	<string>com.ms.CollegeDelivery</string>
 	<key>PROJECT_ID</key>
-	<string>fall23-99746</string>
+	<string>collegedeliveryapp</string>
 	<key>STORAGE_BUCKET</key>
-	<string>fall23-99746.appspot.com</string>
+	<string>collegedeliveryapp.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:768911303215:ios:9b6c948b5b172af7935cda</string>
+	<string>1:656021875798:ios:5b1f5056334659f163dff7</string>
 </dict>
 </plist>

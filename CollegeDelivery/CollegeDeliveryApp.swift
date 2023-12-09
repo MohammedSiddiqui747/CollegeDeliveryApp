@@ -21,7 +21,8 @@ struct CollegeDeliveryApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(fireDBHelper)
+            //ContentView().environmentObject(fireDBHelper)
+            HomePage().environmentObject(fireDBHelper)
         }
     }
 }
