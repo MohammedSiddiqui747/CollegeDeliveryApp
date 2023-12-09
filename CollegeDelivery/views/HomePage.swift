@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomePage: View {
+    @EnvironmentObject var locationHelper : LocationHelper
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -37,8 +39,7 @@ struct HomePage: View {
                             Text("Requested Items")
                         }
                     } .buttonStyle(RoundedButtonStyle())
-                    
-                    NavigationLink(destination: PostItemPage()) {
+                    NavigationLink(destination: MapPage().environmentObject(locationHelper)) {
                         VStack(spacing: 8) {
                             Image(systemName: "map.fill")
                                 .font(.system(size: 54))
@@ -47,8 +48,10 @@ struct HomePage: View {
                     } .buttonStyle(RoundedButtonStyle())
                 }
                 .padding()
+                
+                
             }
-            .navigationTitle("Sheridan Lending App")
+            .navigationTitle("College Delivery App")
         }
     }
 }
@@ -63,5 +66,18 @@ struct RoundedButtonStyle: ButtonStyle {
             .cornerRadius(10)
             .scaleEffect(configuration.isPressed ? 0.95 : 1.0)
             .aspectRatio(1.0, contentMode: .fit)
+    }
+}
+
+struct MapButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding(16)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(10)
+            .scaleEffect(configuration.isPressed ? 0.95 : 1.0)
+            .aspectRatio(2, contentMode: .fit)
     }
 }

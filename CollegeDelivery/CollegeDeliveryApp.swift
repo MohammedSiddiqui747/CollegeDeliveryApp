@@ -13,16 +13,18 @@ import FirebaseFirestore
 struct CollegeDeliveryApp: App {
     
     let fireDBHelper : FireDBHelper
+    let locationHelper: LocationHelper
     
     init() {
         FirebaseApp.configure()
         fireDBHelper = FireDBHelper.getInstance()
+        locationHelper = LocationHelper()
     }
     
     var body: some Scene {
         WindowGroup {
             //ContentView().environmentObject(fireDBHelper)
-            HomePage().environmentObject(fireDBHelper)
+            HomePage().environmentObject(fireDBHelper).environmentObject(locationHelper)
         }
     }
 }

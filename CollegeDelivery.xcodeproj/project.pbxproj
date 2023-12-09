@@ -35,6 +35,8 @@
 		3BCF2D4B2B23F6F40077FE5F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3BCF2D4A2B23F6F40077FE5F /* FirebaseStorage */; };
 		3BCF2D4D2B23F6F40077FE5F /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 3BCF2D4C2B23F6F40077FE5F /* FirebaseStorageCombine-Community */; };
 		3BCF2D4F2B23FEA20077FE5F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BCF2D4E2B23FEA20077FE5F /* GoogleService-Info.plist */; };
+		3BCF2D512B2428C50077FE5F /* MapPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCF2D502B2428C50077FE5F /* MapPage.swift */; };
+		3BCF2D532B242A5B0077FE5F /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCF2D522B242A5B0077FE5F /* LocationHelper.swift */; };
 		8442A94C2B1671CA004DCC5A /* CollegeDeliveryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442A94B2B1671CA004DCC5A /* CollegeDeliveryApp.swift */; };
 		8442A94E2B1671CA004DCC5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442A94D2B1671CA004DCC5A /* ContentView.swift */; };
 		8442A9502B1671CE004DCC5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8442A94F2B1671CE004DCC5A /* Assets.xcassets */; };
@@ -55,6 +57,8 @@
 
 /* Begin PBXFileReference section */
 		3BCF2D4E2B23FEA20077FE5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3BCF2D502B2428C50077FE5F /* MapPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPage.swift; sourceTree = "<group>"; };
+		3BCF2D522B242A5B0077FE5F /* LocationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
 		8442A9482B1671CA004DCC5A /* CollegeDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollegeDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8442A94B2B1671CA004DCC5A /* CollegeDeliveryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeDeliveryApp.swift; sourceTree = "<group>"; };
 		8442A94D2B1671CA004DCC5A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				84C9FD802B17B5D6001589A4 /* FireDBHelper.swift */,
+				3BCF2D522B242A5B0077FE5F /* LocationHelper.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 				84C9FD852B17BD17001589A4 /* ItemListingPage.swift */,
 				84C9FD872B17BDF2001589A4 /* PostItemPage.swift */,
 				84C9FD892B17BE2C001589A4 /* RequestManagementPage.swift */,
+				3BCF2D502B2428C50077FE5F /* MapPage.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -292,9 +298,11 @@
 				84C9FD8A2B17BE2C001589A4 /* RequestManagementPage.swift in Sources */,
 				84C9FD842B17BCE2001589A4 /* HomePage.swift in Sources */,
 				8442A9682B17B13D004DCC5A /* Item.swift in Sources */,
+				3BCF2D532B242A5B0077FE5F /* LocationHelper.swift in Sources */,
 				84C9FD862B17BD17001589A4 /* ItemListingPage.swift in Sources */,
 				84C9FD812B17B5D6001589A4 /* FireDBHelper.swift in Sources */,
 				8442A94E2B1671CA004DCC5A /* ContentView.swift in Sources */,
+				3BCF2D512B2428C50077FE5F /* MapPage.swift in Sources */,
 				8442A94C2B1671CA004DCC5A /* CollegeDeliveryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +440,8 @@
 				DEVELOPMENT_TEAM = 65DY6FY3W5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -461,6 +471,8 @@
 				DEVELOPMENT_TEAM = 65DY6FY3W5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
