@@ -14,7 +14,6 @@ struct HomePage: View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: [GridItem(.flexible(minimum: 100, maximum: 200)), GridItem(.flexible(minimum: 100, maximum: 200))], spacing: 16) {
-                    
                     // Manually create NavigationLink buttons with icon and text
                     NavigationLink(destination: ItemListingPage()) {
                         VStack(spacing: 8) {
