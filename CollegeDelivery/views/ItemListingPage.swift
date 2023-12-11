@@ -25,6 +25,9 @@ struct ItemListingPage: View {
                         .font(.headline)
                     Text(item.itemDesc)
                         .font(.subheadline)
+                    Text("Destination: \(item.itemLoc)") // Display the destination
+                        .font(.caption)
+                        .foregroundColor(.gray)
                 }
             }
             .navigationBarTitle("Posted Items")
@@ -35,6 +38,8 @@ struct ItemListingPage: View {
         }
     }
 }
+
+
 struct ItemListingPage_Previews: PreviewProvider {
     static var previews: some View {
         ItemListingPage()

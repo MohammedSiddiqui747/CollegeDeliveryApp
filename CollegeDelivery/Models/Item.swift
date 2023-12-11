@@ -18,20 +18,23 @@ struct Item : Codable, Hashable{
     
     var itemName : String = ""
     var itemDesc : String = ""
+    var itemLoc : String = ""
 
     
     init(){
         self.itemName = "NA"
         self.itemDesc = "NA"
+        self.itemLoc = "NA"
 
         
     }
     
-    init(itemname: String, itemdesc: String) {
+    init(itemname: String, itemdesc: String, itemloc: String) {
         
 
         self.itemName = itemname
         self.itemDesc = itemdesc
+        self.itemLoc = itemloc
     }
     
     //JSON object to Swift Object
@@ -47,7 +50,11 @@ struct Item : Codable, Hashable{
             return nil
         }
         
-        self.init(itemname: itemName, itemdesc: itemDesc)
+        guard let itemLoc = dictionary["itemLoc"] as? String else{
+            return nil
+        }
+        
+        self.init(itemname: itemName, itemdesc: itemDesc, itemloc: itemLoc)
         
     }
 }
