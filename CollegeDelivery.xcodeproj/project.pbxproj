@@ -53,6 +53,11 @@
 		84C9FD882B17BDF2001589A4 /* PostItemPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9FD872B17BDF2001589A4 /* PostItemPage.swift */; };
 		84C9FD8A2B17BE2C001589A4 /* RequestManagementPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9FD892B17BE2C001589A4 /* RequestManagementPage.swift */; };
 		E61D8A8F2B2774DA00E8DE49 /* ManageItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D8A8E2B2774DA00E8DE49 /* ManageItems.swift */; };
+		E61D8A912B27C3C200E8DE49 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D8A902B27C3C200E8DE49 /* RootView.swift */; };
+		E61D8A952B27C3F800E8DE49 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D8A942B27C3F800E8DE49 /* SignUpView.swift */; };
+		E61D8A972B27C41900E8DE49 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D8A962B27C41900E8DE49 /* SignInView.swift */; };
+		E61D8A992B27C48500E8DE49 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D8A982B27C48500E8DE49 /* HomeView.swift */; };
+		E61D8A9B2B27C6A500E8DE49 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D8A9A2B27C6A500E8DE49 /* AuthView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +76,11 @@
 		84C9FD872B17BDF2001589A4 /* PostItemPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostItemPage.swift; sourceTree = "<group>"; };
 		84C9FD892B17BE2C001589A4 /* RequestManagementPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManagementPage.swift; sourceTree = "<group>"; };
 		E61D8A8E2B2774DA00E8DE49 /* ManageItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageItems.swift; sourceTree = "<group>"; };
+		E61D8A902B27C3C200E8DE49 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		E61D8A942B27C3F800E8DE49 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		E61D8A962B27C41900E8DE49 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		E61D8A982B27C48500E8DE49 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E61D8A9A2B27C6A500E8DE49 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +191,11 @@
 				E61D8A8E2B2774DA00E8DE49 /* ManageItems.swift */,
 				84C9FD892B17BE2C001589A4 /* RequestManagementPage.swift */,
 				3BCF2D502B2428C50077FE5F /* MapPage.swift */,
+				E61D8A902B27C3C200E8DE49 /* RootView.swift */,
+				E61D8A942B27C3F800E8DE49 /* SignUpView.swift */,
+				E61D8A982B27C48500E8DE49 /* HomeView.swift */,
+				E61D8A9A2B27C6A500E8DE49 /* AuthView.swift */,
+				E61D8A962B27C41900E8DE49 /* SignInView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -296,11 +311,16 @@
 				84C9FD882B17BDF2001589A4 /* PostItemPage.swift in Sources */,
 				84C9FD8A2B17BE2C001589A4 /* RequestManagementPage.swift in Sources */,
 				84C9FD842B17BCE2001589A4 /* HomePage.swift in Sources */,
+				E61D8A992B27C48500E8DE49 /* HomeView.swift in Sources */,
 				8442A9682B17B13D004DCC5A /* Item.swift in Sources */,
 				3BCF2D532B242A5B0077FE5F /* LocationHelper.swift in Sources */,
+				E61D8A9B2B27C6A500E8DE49 /* AuthView.swift in Sources */,
 				84C9FD862B17BD17001589A4 /* ItemListingPage.swift in Sources */,
 				84C9FD812B17B5D6001589A4 /* FireDBHelper.swift in Sources */,
 				8442A94E2B1671CA004DCC5A /* ContentView.swift in Sources */,
+				E61D8A972B27C41900E8DE49 /* SignInView.swift in Sources */,
+				E61D8A912B27C3C200E8DE49 /* RootView.swift in Sources */,
+				E61D8A952B27C3F800E8DE49 /* SignUpView.swift in Sources */,
 				E61D8A8F2B2774DA00E8DE49 /* ManageItems.swift in Sources */,
 				3BCF2D512B2428C50077FE5F /* MapPage.swift in Sources */,
 				8442A94C2B1671CA004DCC5A /* CollegeDeliveryApp.swift in Sources */,
