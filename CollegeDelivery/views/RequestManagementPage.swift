@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RequestsManagementPage: View {
     var body: some View {
-        Text("Requests Management Page")
+        Text("Placeholder")
         // Implement the logic for managing requests here
     }
 }

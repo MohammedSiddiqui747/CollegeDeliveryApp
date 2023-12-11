@@ -52,6 +52,7 @@
 		84C9FD862B17BD17001589A4 /* ItemListingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9FD852B17BD17001589A4 /* ItemListingPage.swift */; };
 		84C9FD882B17BDF2001589A4 /* PostItemPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9FD872B17BDF2001589A4 /* PostItemPage.swift */; };
 		84C9FD8A2B17BE2C001589A4 /* RequestManagementPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9FD892B17BE2C001589A4 /* RequestManagementPage.swift */; };
+		E61D8A8F2B2774DA00E8DE49 /* ManageItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D8A8E2B2774DA00E8DE49 /* ManageItems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		84C9FD852B17BD17001589A4 /* ItemListingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListingPage.swift; sourceTree = "<group>"; };
 		84C9FD872B17BDF2001589A4 /* PostItemPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostItemPage.swift; sourceTree = "<group>"; };
 		84C9FD892B17BE2C001589A4 /* RequestManagementPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManagementPage.swift; sourceTree = "<group>"; };
+		E61D8A8E2B2774DA00E8DE49 /* ManageItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageItems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 				84C9FD832B17BCE2001589A4 /* HomePage.swift */,
 				84C9FD852B17BD17001589A4 /* ItemListingPage.swift */,
 				84C9FD872B17BDF2001589A4 /* PostItemPage.swift */,
+				E61D8A8E2B2774DA00E8DE49 /* ManageItems.swift */,
 				84C9FD892B17BE2C001589A4 /* RequestManagementPage.swift */,
 				3BCF2D502B2428C50077FE5F /* MapPage.swift */,
 			);
@@ -298,6 +301,7 @@
 				84C9FD862B17BD17001589A4 /* ItemListingPage.swift in Sources */,
 				84C9FD812B17B5D6001589A4 /* FireDBHelper.swift in Sources */,
 				8442A94E2B1671CA004DCC5A /* ContentView.swift in Sources */,
+				E61D8A8F2B2774DA00E8DE49 /* ManageItems.swift in Sources */,
 				3BCF2D512B2428C50077FE5F /* MapPage.swift in Sources */,
 				8442A94C2B1671CA004DCC5A /* CollegeDeliveryApp.swift in Sources */,
 			);

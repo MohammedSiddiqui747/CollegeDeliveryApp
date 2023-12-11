@@ -47,17 +47,18 @@ class FireDBHelper : ObservableObject{
         }
     }
     
-    func deleteItem(docIDtoDelete : String){
-        self.db
-            .collection(COLLECTION_NAME)
-            .document(docIDtoDelete)
-            .delete{error in
-                if let err = error{
-                    print(#function, "Unable to delete : \(err)")
-                }else{
-                    print(#function, "Document deleted successfully")
+    func deleteItem(docIDtoDelete: String) {
+        self.db.collection(COLLECTION_NAME).document(docIDtoDelete).delete { error in
+            if let err = error {
+                print(#function, "Unable to delete : \(err)")
+            } else {
+                print(#function, "Document deleted successfully")
+                DispatchQueue.main.async {
+                    // Ensure the deletion is also reflected in itemList
+                    self.itemList.removeAll { $0.id == docIDtoDelete }
                 }
             }
+        }
     }
     
     func retrieveAllItems(){
