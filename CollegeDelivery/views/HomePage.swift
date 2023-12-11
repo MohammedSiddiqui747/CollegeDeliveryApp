@@ -35,7 +35,7 @@ struct HomePage: View {
                         VStack(spacing: 8) {
                             Image(systemName: "tray.full.fill")
                                 .font(.system(size: 54))
-                            Text("PlaceHolder")
+                            Text("Requested Items")
                         }
                     } .buttonStyle(RoundedButtonStyle())
                     NavigationLink(destination: MapPage().environmentObject(locationHelper)) {

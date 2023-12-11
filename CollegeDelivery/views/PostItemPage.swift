@@ -13,7 +13,7 @@ struct PostItemPage: View {
     @State private var showAlert = false
     @State private var alertMessage = ""
 
-    private let descriptionOptions = ["Laptop", "Stationary", "Art Supplies", "Textbook"]
+    private let descriptionOptions = ["Laptop", "Stationary", "Art Supplies", "Textbook","Other"]
 
     private var dbHelper = FireDBHelper.getInstance()
 
