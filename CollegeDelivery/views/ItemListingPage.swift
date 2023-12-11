@@ -8,12 +8,25 @@
 import SwiftUI
 
 struct ItemListingPage: View {
-    var body: some View {
-        Text("Item Listing Page")
-        // Here, you would implement a list view of items
-    }
-}
+    @ObservedObject private var dbHelper = FireDBHelper.getInstance()
 
+       var body: some View {
+           NavigationView {
+               List(dbHelper.itemList, id: \.id) { item in
+                   VStack(alignment: .leading) {
+                       Text(item.itemName)
+                           .font(.headline)
+                       Text(item.itemDesc)
+                           .font(.subheadline)
+                   }
+               }
+               .navigationBarTitle("Posted Items")
+           }
+           .onAppear {
+               dbHelper.retrieveAllItems()
+           }
+       }
+   }
 struct ItemListingPage_Previews: PreviewProvider {
     static var previews: some View {
         ItemListingPage()
