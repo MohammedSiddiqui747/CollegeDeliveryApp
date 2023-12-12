@@ -11,6 +11,7 @@ import CoreLocation
 class LocationHelper : NSObject, ObservableObject, CLLocationManagerDelegate{
     @Published var currentLocation : CLLocation?
     @Published var targetLocation: CLLocation?
+    @Published var showCurrentLocationToggle: Bool = false
     private let locationManager = CLLocationManager()
     private let geoCoder = CLGeocoder()
    
@@ -22,6 +23,18 @@ class LocationHelper : NSObject, ObservableObject, CLLocationManagerDelegate{
         self.locationManager.delegate = self
     }
    
+    
+    
+    func showCurrentLocation() {
+        showCurrentLocationToggle = true
+    }
+   
+    
+    
+    func showTargetLocation() {
+        showCurrentLocationToggle = false
+    }
+    
     
     
     func setTargetLocationTo(address: String) {

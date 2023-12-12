@@ -305,4 +305,45 @@ class FireDBHelper : ObservableObject{
            }
        }
     
+    func retrieveAllItemsFromLocation(locationOfItems: String){
+        do{
+            self.db
+                .collection(COLLECTION_NAME)
+                .order(by: ATTRIBUTE_INAME, descending: true)
+                .whereField("itemLoc", isEqualTo: locationOfItems)
+                .addSnapshotListener( { (snapshot, error) in
+                    guard let result = snapshot else{
+                        print(#function, "Unable to retrieve snapshot : \(error)")
+                        return
+                    }
+                    print(#function, "Result : \(result)")
+                    result.documentChanges.forEach{ (docChange) in
+                        do{
+                            let item = try docChange.document.data(as: Item.self)
+                            print(#function, "item from db : id : \(item.id) name : \(item.itemName)")
+                            let matchedIndex = self.itemList.firstIndex(where: { ($0.id?.elementsEqual(item.id!))!})
+                            if docChange.type == .added{
+                                if (matchedIndex != nil){
+                                } else {
+                                    self.itemList.append(item)
+                                }
+                                print(#function, "New document added : \(item)")
+                            }
+                            if docChange.type == .modified{
+                                print(#function, "Document updated : \(item)")
+                            }
+                            if docChange.type == .removed{
+                                print(#function, "Document deleted : \(item)")
+                            }
+                        }catch let err as NSError{
+                            print(#function, "Unable to access document change : \(err)")
+                        }
+                    }
+                })
+        } catch let err as NSError {
+            print(#function, "Unable to retrieve \(err)" )
+        }
+    }
+    
+    
 }
