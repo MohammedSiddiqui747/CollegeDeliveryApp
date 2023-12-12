@@ -61,9 +61,12 @@ struct MapPage: View {
                     }
                 }
                 .pickerStyle(SegmentedPickerStyle())
-                Button("Current Location", action: {
+                Button(action: {
                     self.locationHelper.showCurrentLocation()
-                })
+                }) {
+                    Text("Current Location")
+                        .frame(height: 20)
+                }
             }
             .onChange(of: selectedOption) { index in
                 print("SET TARGET LOCATION TO \(self.addresses[index])")
@@ -206,6 +209,8 @@ struct MyMap : UIViewRepresentable{
      */
     
 }
+
+
 
 
 
