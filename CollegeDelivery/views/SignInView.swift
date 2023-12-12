@@ -11,8 +11,8 @@ import FirebaseAuth
 struct SignInView: View {
     @Binding var rootView: RootView
 
-    @State private var email: String = "test1@gmail.com"
-    @State private var password: String = "pwd1234"
+    @State private var email: String = "jpveloso@hotmail.ca"
+    @State private var password: String = "password"
     @State private var showAlert = false
     @State private var alertMessage = ""
 

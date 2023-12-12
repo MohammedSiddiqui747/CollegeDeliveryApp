@@ -58,7 +58,40 @@
 		E61D8A972B27C41900E8DE49 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D8A962B27C41900E8DE49 /* SignInView.swift */; };
 		E61D8A992B27C48500E8DE49 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D8A982B27C48500E8DE49 /* HomeView.swift */; };
 		E61D8A9B2B27C6A500E8DE49 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D8A9A2B27C6A500E8DE49 /* AuthView.swift */; };
+		E61D8B212B27EF6F00E8DE49 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61D8B062B27ED3E00E8DE49 /* WidgetKit.framework */; };
+		E61D8B222B27EF6F00E8DE49 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61D8ACA2B27D1F500E8DE49 /* SwiftUI.framework */; };
+		E61D8B252B27EF6F00E8DE49 /* CollegeDeliveryWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D8B242B27EF6F00E8DE49 /* CollegeDeliveryWidgetBundle.swift */; };
+		E61D8B272B27EF6F00E8DE49 /* CollegeDeliveryWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D8B262B27EF6F00E8DE49 /* CollegeDeliveryWidget.swift */; };
+		E61D8B292B27EF7000E8DE49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61D8B282B27EF7000E8DE49 /* Assets.xcassets */; };
+		E61D8B2D2B27EF7000E8DE49 /* CollegeDeliveryWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E61D8B202B27EF6F00E8DE49 /* CollegeDeliveryWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E61D8B322B27EF7F00E8DE49 /* SimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D8B312B27EF7F00E8DE49 /* SimpleEntry.swift */; };
+		E61D8B342B27EF8F00E8DE49 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D8B332B27EF8F00E8DE49 /* Item.swift */; };
+		E61D8B362B27EFDA00E8DE49 /* WidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61D8B352B27EFDA00E8DE49 /* WidgetEntryView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E61D8B2B2B27EF7000E8DE49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8442A9402B1671CA004DCC5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E61D8B1F2B27EF6F00E8DE49;
+			remoteInfo = CollegeDeliveryWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E61D8ADE2B27D1F600E8DE49 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E61D8B2D2B27EF7000E8DE49 /* CollegeDeliveryWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3BCF2D502B2428C50077FE5F /* MapPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPage.swift; sourceTree = "<group>"; };
@@ -81,6 +114,18 @@
 		E61D8A962B27C41900E8DE49 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		E61D8A982B27C48500E8DE49 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E61D8A9A2B27C6A500E8DE49 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		E61D8ACA2B27D1F500E8DE49 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		E61D8AE02B27D84E00E8DE49 /* CollegeDelivery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CollegeDelivery.entitlements; sourceTree = "<group>"; };
+		E61D8B062B27ED3E00E8DE49 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		E61D8B202B27EF6F00E8DE49 /* CollegeDeliveryWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CollegeDeliveryWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E61D8B242B27EF6F00E8DE49 /* CollegeDeliveryWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeDeliveryWidgetBundle.swift; sourceTree = "<group>"; };
+		E61D8B262B27EF6F00E8DE49 /* CollegeDeliveryWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeDeliveryWidget.swift; sourceTree = "<group>"; };
+		E61D8B282B27EF7000E8DE49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E61D8B2A2B27EF7000E8DE49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E61D8B312B27EF7F00E8DE49 /* SimpleEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEntry.swift; sourceTree = "<group>"; };
+		E61D8B332B27EF8F00E8DE49 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		E61D8B352B27EFDA00E8DE49 /* WidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetEntryView.swift; sourceTree = "<group>"; };
+		E61D8B372B27EFEF00E8DE49 /* CollegeDeliveryWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CollegeDeliveryWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,13 +168,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E61D8B1D2B27EF6F00E8DE49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E61D8B222B27EF6F00E8DE49 /* SwiftUI.framework in Frameworks */,
+				E61D8B212B27EF6F00E8DE49 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		8442A93F2B1671CA004DCC5A = {
 			isa = PBXGroup;
 			children = (
+				E61D8B372B27EFEF00E8DE49 /* CollegeDeliveryWidgetExtension.entitlements */,
 				8442A94A2B1671CA004DCC5A /* CollegeDelivery */,
+				E61D8B232B27EF6F00E8DE49 /* CollegeDeliveryWidget */,
+				E61D8AC72B27D1F500E8DE49 /* Frameworks */,
 				8442A9492B1671CA004DCC5A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -138,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				8442A9482B1671CA004DCC5A /* CollegeDelivery.app */,
+				E61D8B202B27EF6F00E8DE49 /* CollegeDeliveryWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,6 +203,7 @@
 		8442A94A2B1671CA004DCC5A /* CollegeDelivery */ = {
 			isa = PBXGroup;
 			children = (
+				E61D8AE02B27D84E00E8DE49 /* CollegeDelivery.entitlements */,
 				84C9FD822B17BC87001589A4 /* views */,
 				84C9FD7F2B17B5B4001589A4 /* helpers */,
 				8442A9662B17B11E004DCC5A /* models */,
@@ -200,6 +259,29 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		E61D8AC72B27D1F500E8DE49 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E61D8ACA2B27D1F500E8DE49 /* SwiftUI.framework */,
+				E61D8B062B27ED3E00E8DE49 /* WidgetKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E61D8B232B27EF6F00E8DE49 /* CollegeDeliveryWidget */ = {
+			isa = PBXGroup;
+			children = (
+				E61D8B242B27EF6F00E8DE49 /* CollegeDeliveryWidgetBundle.swift */,
+				E61D8B262B27EF6F00E8DE49 /* CollegeDeliveryWidget.swift */,
+				E61D8B312B27EF7F00E8DE49 /* SimpleEntry.swift */,
+				E61D8B332B27EF8F00E8DE49 /* Item.swift */,
+				E61D8B352B27EFDA00E8DE49 /* WidgetEntryView.swift */,
+				E61D8B282B27EF7000E8DE49 /* Assets.xcassets */,
+				E61D8B2A2B27EF7000E8DE49 /* Info.plist */,
+			);
+			path = CollegeDeliveryWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -210,10 +292,12 @@
 				8442A9442B1671CA004DCC5A /* Sources */,
 				8442A9452B1671CA004DCC5A /* Frameworks */,
 				8442A9462B1671CA004DCC5A /* Resources */,
+				E61D8ADE2B27D1F600E8DE49 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E61D8B2C2B27EF7000E8DE49 /* PBXTargetDependency */,
 			);
 			name = CollegeDelivery;
 			packageProductDependencies = (
@@ -254,6 +338,23 @@
 			productReference = 8442A9482B1671CA004DCC5A /* CollegeDelivery.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E61D8B1F2B27EF6F00E8DE49 /* CollegeDeliveryWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E61D8B2E2B27EF7000E8DE49 /* Build configuration list for PBXNativeTarget "CollegeDeliveryWidgetExtension" */;
+			buildPhases = (
+				E61D8B1C2B27EF6F00E8DE49 /* Sources */,
+				E61D8B1D2B27EF6F00E8DE49 /* Frameworks */,
+				E61D8B1E2B27EF6F00E8DE49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CollegeDeliveryWidgetExtension;
+			productName = CollegeDeliveryWidgetExtension;
+			productReference = E61D8B202B27EF6F00E8DE49 /* CollegeDeliveryWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -265,6 +366,9 @@
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					8442A9472B1671CA004DCC5A = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					E61D8B1F2B27EF6F00E8DE49 = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
 				};
@@ -286,6 +390,7 @@
 			projectRoot = "";
 			targets = (
 				8442A9472B1671CA004DCC5A /* CollegeDelivery */,
+				E61D8B1F2B27EF6F00E8DE49 /* CollegeDeliveryWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -298,6 +403,14 @@
 				8442A9532B1671CE004DCC5A /* Preview Assets.xcassets in Resources */,
 				8442A9502B1671CE004DCC5A /* Assets.xcassets in Resources */,
 				8442A95A2B17992D004DCC5A /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E61D8B1E2B27EF6F00E8DE49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E61D8B292B27EF7000E8DE49 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,7 +440,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E61D8B1C2B27EF6F00E8DE49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E61D8B342B27EF8F00E8DE49 /* Item.swift in Sources */,
+				E61D8B322B27EF7F00E8DE49 /* SimpleEntry.swift in Sources */,
+				E61D8B252B27EF6F00E8DE49 /* CollegeDeliveryWidgetBundle.swift in Sources */,
+				E61D8B272B27EF6F00E8DE49 /* CollegeDeliveryWidget.swift in Sources */,
+				E61D8B362B27EFDA00E8DE49 /* WidgetEntryView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E61D8B2C2B27EF7000E8DE49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E61D8B1F2B27EF6F00E8DE49 /* CollegeDeliveryWidgetExtension */;
+			targetProxy = E61D8B2B2B27EF7000E8DE49 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8442A9542B1671CE004DCC5A /* Debug */ = {
@@ -452,12 +585,14 @@
 		8442A9572B1671CE004DCC5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CollegeDelivery/CollegeDelivery.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CollegeDelivery/Preview Content\"";
-				DEVELOPMENT_TEAM = 65DY6FY3W5;
+				DEVELOPMENT_TEAM = 87B6PP9F24;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
@@ -483,12 +618,14 @@
 		8442A9582B1671CE004DCC5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CollegeDelivery/CollegeDelivery.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CollegeDelivery/Preview Content\"";
-				DEVELOPMENT_TEAM = 65DY6FY3W5;
+				DEVELOPMENT_TEAM = 87B6PP9F24;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
@@ -505,6 +642,62 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ms.CollegeDelivery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E61D8B2F2B27EF7000E8DE49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CollegeDeliveryWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 87B6PP9F24;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CollegeDeliveryWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CollegeDeliveryWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ms.CollegeDelivery.CollegeDeliveryWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E61D8B302B27EF7000E8DE49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CollegeDeliveryWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 87B6PP9F24;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CollegeDeliveryWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CollegeDeliveryWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ms.CollegeDelivery.CollegeDeliveryWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -528,6 +721,15 @@
 			buildConfigurations = (
 				8442A9572B1671CE004DCC5A /* Debug */,
 				8442A9582B1671CE004DCC5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E61D8B2E2B27EF7000E8DE49 /* Build configuration list for PBXNativeTarget "CollegeDeliveryWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E61D8B2F2B27EF7000E8DE49 /* Debug */,
+				E61D8B302B27EF7000E8DE49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

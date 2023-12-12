@@ -165,6 +165,8 @@ class FireDBHelper : ObservableObject{
         }catch let err as NSError{
             print(#function, "Unable to retrieve \(err)" )
         }
+        self.updateWidgetData()
+
     }
     
     func updateItem( updatedItemIndex : Int ){
@@ -194,6 +196,15 @@ class FireDBHelper : ObservableObject{
                 }
                 
             }
+    }
+    func updateWidgetData() {
+        let userDefaults = UserDefaults(suiteName: "group.com.ms.CollegeDelivery")
+        do {
+            let data = try JSONEncoder().encode(itemList)
+            userDefaults?.set(data, forKey: "ItemList")
+        } catch {
+            print("Error encoding itemList: \(error)")
+        }
     }
     
 }
