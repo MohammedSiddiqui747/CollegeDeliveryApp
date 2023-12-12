@@ -13,42 +13,51 @@ struct RequestsManagementPage: View {
     @ObservedObject private var dbHelper = FireDBHelper.getInstance()
     
     
-
+    @State private var reqUserEmail = ""
+    
+    var filteredItems: [Item] {
+        dbHelper.reqItemList.filter { item in
+            item.userEmail == reqUserEmail
+        }
+    }
+    
+    
     
     var body: some View {
         NavigationView {
-            List(dbHelper.reqItemList, id: \.id){ item in
-                VStack(alignment: .leading) {
-                    Text(item.itemName)
-                        .font(.headline)
-                    Text(item.itemDesc)
-                        .font(.subheadline)
-                    Text("Destination: \(item.itemLoc)") // Display the destination
-                        .font(.caption)
-                        .foregroundColor(.gray)
-                    Spacer()
-                    Button(action: {
-                        if let id = item.id {
-                            dbHelper.deleteReqItem(docIDtoDelete: id)
-
-                        }
-                    }) {
-                        Image(systemName: "trash")
-                            .foregroundColor(.red)
-                    }
-
+            VStack{
+                TextField("Please Enter your email: ", text: $reqUserEmail)
+                    .padding()
+                Button(action: {
+                    dbHelper.retrieveAllReqItems()
+                }) {
+                    Text("Show Requested Items")
+                        .padding()
                 }
-                
+                .padding()
+                List(filteredItems, id: \.id) { item in
+                    VStack(alignment: .leading) {
+                        Text(item.itemName)
+                            .font(.headline)
+                        Text(item.itemDesc)
+                            .font(.subheadline)
+                        Text("Destination: \(item.itemLoc)") // Display the destination
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                        Spacer()
+                        Button(action: {
+                            if let id = item.id {
+                                dbHelper.deleteReqItem(docIDtoDelete: id)
+                                
+                            }
+                        }) {
+                            Image(systemName: "trash")
+                                .foregroundColor(.red)
+                        }
+                    }
+                }
             }
-        }
-        .onAppear{
-            dbHelper.retrieveAllReqItems()
+            
         }
     }
 }
-
-//struct RequestsManagementPage_Previews: PreviewProvider {
-//    static var previews: some View {
-//        RequestsManagementPage()
-//    }
-//}

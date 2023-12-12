@@ -14,9 +14,20 @@ import MapKit
 
 struct MapPage: View {
     @EnvironmentObject var locationHelper : LocationHelper
+    @ObservedObject private var dbHelper = FireDBHelper.getInstance()
+    @State private var itemListIsVisible : Bool = false
+
+    
     @State private var selectedOption = 0
-    let options = ["Trafalgar", "Hazel McCallion", "Davis"]
+    let options = ["Trafalgar", "HMC", "Davis"]
     let addresses = ["1430 Trafalgar Rd, Oakville, Canada", "4180 Duke of York, Missisauga, Canada", "7899 McLaughlin Rd, Brampton, Canada"]
+    
+    var filteredItems: [Item] {
+        dbHelper.itemList.filter { item in
+            item.itemLoc.lowercased().contains(options[selectedOption].lowercased())
+        }
+    }
+    
     /*
     @State private var sourceCoordinate = CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194) // San Francisco
     @State private var destinationCoordinate = CLLocationCoordinate2D(latitude: 34.0522, longitude: -118.2437) // Los Angeles
@@ -55,6 +66,33 @@ struct MapPage: View {
                 }
                 .background(Color.clear)
                  */
+                if itemListIsVisible {
+                    ScrollView {
+                        HStack {
+                            Text("Items:")
+                            Spacer()
+                        }
+                        NavigationView {
+                            List(filteredItems, id: \.id) { item in
+                                VStack(alignment: .leading) {
+                                    Text(item.itemName)
+                                        .font(.headline)
+                                    Text(item.itemDesc)
+                                        .font(.subheadline)
+                                    Text("Destination: \(item.itemLoc)") // Display the destination
+                                        .font(.caption)
+                                        .foregroundColor(.gray)
+                                }
+                            }
+                            .onAppear {
+                                dbHelper.retrieveAllItems()
+                            }
+                        }
+                    }
+                    .padding()
+                    .cornerRadius(50)
+                }
+                Text("Select a location:")
                 Picker("Options", selection: $selectedOption) {
                     ForEach(0..<3) { index in
                         Text(self.options[index]).tag(index)
@@ -63,15 +101,24 @@ struct MapPage: View {
                 .pickerStyle(SegmentedPickerStyle())
                 Button(action: {
                     self.locationHelper.showCurrentLocation()
+                    self.itemListIsVisible = false
                 }) {
                     Text("Current Location")
                         .frame(height: 20)
+                        .padding()
+                        .foregroundColor(Color.white)
+                        .background(Color.blue)
+                        .cornerRadius(50)
                 }
+                .frame(width: 200, height: 50)
+                .padding()
             }
             .onChange(of: selectedOption) { index in
                 print("SET TARGET LOCATION TO \(self.addresses[index])")
                 self.locationHelper.setTargetLocationTo(address: self.addresses[index])
                 self.locationHelper.showTargetLocation()
+                self.itemListIsVisible = true
+                dbHelper.retrieveAllItems()
             }
             .onAppear(){
                 //

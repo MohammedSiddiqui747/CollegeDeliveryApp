@@ -102,7 +102,7 @@ class FireDBHelper : ObservableObject{
                 .addSnapshotListener( { (snapshot, error) in
                     
                     guard let result = snapshot else{
-                        print(#function, "Unable to retrieve snapshot : \(error)")
+                        print(#function, "Unable to retrieve snapshot : \(String(describing: error))")
                         return
                     }
                     
@@ -114,7 +114,7 @@ class FireDBHelper : ObservableObject{
                             //obtain the document as Student class object
                             let item = try docChange.document.data(as: Item.self)
                             
-                            print(#function, "item from db : id : \(item.id) name : \(item.itemName)")
+                            print(#function, "item from db : id : \(String(describing: item.id)) name : \(item.itemName)")
                             
                             //check if the changed document is already in the list
                             let matchedIndex = self.itemList.firstIndex(where: { ($0.id?.elementsEqual(item.id!))!})
@@ -158,9 +158,12 @@ class FireDBHelper : ObservableObject{
                     }
                 })
             
-        }catch let err as NSError{
+        }
+        /*
+        catch let err as NSError{
             print(#function, "Unable to retrieve \(err)" )
         }
+         */
         
     }
     
@@ -174,7 +177,7 @@ class FireDBHelper : ObservableObject{
                 .addSnapshotListener( { (snapshot, error) in
                     
                     guard let result = snapshot else{
-                        print(#function, "Unable to retrieve snapshot : \(error)")
+                        print(#function, "Unable to retrieve snapshot : \(String(describing: error))")
                         return
                     }
                     
@@ -186,7 +189,7 @@ class FireDBHelper : ObservableObject{
                             //obtain the document as Student class object
                             let item = try docChange.document.data(as: Item.self)
                             
-                            print(#function, "item from db : id : \(item.id) name : \(item.itemName)")
+                            print(#function, "item from db : id : \(String(describing: item.id)) name : \(item.itemName)")
                             
                             //check if the changed document is already in the list
                             let matchedIndex = self.reqItemList.firstIndex(where: { ($0.id?.elementsEqual(item.id!))!})
@@ -230,9 +233,12 @@ class FireDBHelper : ObservableObject{
                     }
                 })
             
-        }catch let err as NSError{
+        }
+        /*
+         catch let err as NSError{
             print(#function, "Unable to retrieve \(err)" )
         }
+         */
         
     }
     
@@ -245,7 +251,7 @@ class FireDBHelper : ObservableObject{
                 .addSnapshotListener( { (snapshot, error) in
                     
                     guard let result = snapshot else {
-                        print(#function, "Unable to search database for the item due to error  : \(error)")
+                        print(#function, "Unable to search database for the item due to error  : \(String(describing: error))")
                         return
                     }
                     
@@ -265,9 +271,12 @@ class FireDBHelper : ObservableObject{
                     }
                 })
             
-        }catch let err as NSError{
+        }
+        /*
+         catch let err as NSError{
             print(#function, "Unable to retrieve \(err)" )
         }
+         */
     }
     
     func updateItem( updatedItemIndex : Int ){
@@ -316,14 +325,14 @@ class FireDBHelper : ObservableObject{
                 .whereField("itemLoc", isEqualTo: locationOfItems)
                 .addSnapshotListener( { (snapshot, error) in
                     guard let result = snapshot else{
-                        print(#function, "Unable to retrieve snapshot : \(error)")
+                        print(#function, "Unable to retrieve snapshot : \(String(describing: error))")
                         return
                     }
                     print(#function, "Result : \(result)")
                     result.documentChanges.forEach{ (docChange) in
                         do{
                             let item = try docChange.document.data(as: Item.self)
-                            print(#function, "item from db : id : \(item.id) name : \(item.itemName)")
+                            print(#function, "item from db : id : \(String(describing: item.id)) name : \(item.itemName)")
                             let matchedIndex = self.itemList.firstIndex(where: { ($0.id?.elementsEqual(item.id!))!})
                             if docChange.type == .added{
                                 if (matchedIndex != nil){
@@ -343,9 +352,12 @@ class FireDBHelper : ObservableObject{
                         }
                     }
                 })
-        } catch let err as NSError {
+        }
+        /*
+         catch let err as NSError {
             print(#function, "Unable to retrieve \(err)" )
         }
+         */
     }
     
     
