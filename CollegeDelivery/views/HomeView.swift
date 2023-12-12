@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     @State private var rootView: RootView = .prompt // Changed to .prompt
     let fireDBHelper: FireDBHelper = FireDBHelper.getInstance()
 

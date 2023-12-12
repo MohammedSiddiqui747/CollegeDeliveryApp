@@ -31,6 +31,10 @@ struct SignInView: View {
             }
 
             HStack {
+                Button("Back") {
+                                    rootView = .prompt // Change rootView to show AuthView
+                                }
+                                .buttonStyle(.borderedProminent)
                 Button(action: {
                     // Perform necessary validation for email and password
                     guard !email.isEmpty, !password.isEmpty else {

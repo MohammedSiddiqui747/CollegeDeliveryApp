@@ -26,6 +26,16 @@ struct RequestsManagementPage: View {
                     Text("Destination: \(item.itemLoc)") // Display the destination
                         .font(.caption)
                         .foregroundColor(.gray)
+                    Spacer()
+                    Button(action: {
+                        if let id = item.id {
+                            dbHelper.deleteReqItem(docIDtoDelete: id)
+
+                        }
+                    }) {
+                        Image(systemName: "trash")
+                            .foregroundColor(.red)
+                    }
 
                 }
                 

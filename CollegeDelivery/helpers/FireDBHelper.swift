@@ -76,15 +76,18 @@ class FireDBHelper : ObservableObject{
     }
     
     func deleteReqItem(docIDtoDelete: String) {
+        // First, remove the item from the local list for immediate UI update
+        DispatchQueue.main.async {
+            self.reqItemList.removeAll { $0.id == docIDtoDelete }
+        }
+
+        // Then, perform the Firestore deletion
         self.db.collection(COLLECTION_REQ).document(docIDtoDelete).delete { error in
             if let err = error {
                 print(#function, "Unable to delete : \(err)")
+                // Optionally, handle re-adding the item or notifying the user upon error
             } else {
                 print(#function, "Document deleted successfully")
-                DispatchQueue.main.async {
-                    // Ensure the deletion is also reflected in itemList
-                    self.itemList.removeAll { $0.id == docIDtoDelete }
-                }
             }
         }
     }

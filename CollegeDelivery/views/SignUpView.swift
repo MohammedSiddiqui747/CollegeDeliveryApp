@@ -13,6 +13,7 @@ import FirebaseAuth
 
 struct SignUpView: View {
     @Binding var rootView: RootView
+    @Environment(\.presentationMode) var presentationMode
 
     @State private var email: String = ""
     @State private var password: String = ""
@@ -34,11 +35,10 @@ struct SignUpView: View {
             }
 
             HStack {
-                Button("Cancel") {
-                    // Dismiss the screen or navigate back
-                }
-                .buttonStyle(.borderedProminent)
-
+                Button("Back") {
+                                    rootView = .prompt // Change rootView to show AuthView
+                                }
+                                .buttonStyle(.borderedProminent)
                 Button("Sign Up") {
                     guard !email.isEmpty, !password.isEmpty else {
                         alertMessage = "Please enter email and password to sign up."

@@ -12,6 +12,12 @@ struct AuthView: View {
 
     var body: some View {
         VStack {
+            Image("download")
+            .resizable()         // Make the image resizable
+            .scaledToFit()       // Ensure the image fits the available space
+            .frame(height: 200)  // Set the height of the image frame (adjust as needed)
+            .padding(.bottom)    // Add some padding below the image
+
             Button("Log In") {
                 rootView = .login
             }
@@ -26,12 +32,13 @@ struct AuthView: View {
             }
             .padding()
             .frame(maxWidth: .infinity)
-            .background(Color.green)
+            .background(Color.blue)
             .foregroundColor(.white)
             .cornerRadius(10)
         }
         .padding()
     }
+    
 }
 /*
 #Preview {
