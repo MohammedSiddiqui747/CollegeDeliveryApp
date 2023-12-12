@@ -22,6 +22,7 @@ class FireDBHelper : ObservableObject{
     private let COLLECTION_NAME = "Items"
     private let ATTRIBUTE_INAME = "itemName"
     private let ATTRIBUTE_IDESC = "itemDesc"
+    
 
     
     private init(database : Firestore){

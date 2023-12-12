@@ -64,7 +64,7 @@ struct HomePage: View {
                         }
                     }
                     .buttonStyle(.borderedProminent)
-                    .foregroundColor(.red)
+                    .foregroundColor(.white)
 
                     Spacer()
                 }
