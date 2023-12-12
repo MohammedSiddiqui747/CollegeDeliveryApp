@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PostItemPage: View {
+    @State private var userEmail = ""
     @State private var itemName = ""
     @State private var selectedDescription = "" // Empty default selection
     @State private var selectedLocation = "" // Empty default selection for destination
@@ -23,6 +24,8 @@ struct PostItemPage: View {
         NavigationView {
             Form {
                 Section(header: Text("Item Details")) {
+                    TextField("Enter User Email", text: $userEmail)
+                    
                     TextField("Item Name", text: $itemName)
                     
                     Picker("Description", selection: $selectedDescription) {
@@ -42,11 +45,11 @@ struct PostItemPage: View {
                     .pickerStyle(MenuPickerStyle())
 
                     Button("Submit") {
-                        if itemName.isEmpty || selectedDescription.isEmpty || selectedLocation.isEmpty {
+                        if userEmail.isEmpty || itemName.isEmpty || selectedDescription.isEmpty || selectedLocation.isEmpty {
                             alertMessage = "Please fill in all fields."
                             showAlert = true
                         } else {
-                            let newItem = Item(itemname: itemName, itemdesc: selectedDescription, itemloc: selectedLocation) // Consider including the destination in your item model
+                            let newItem = Item(itemname: itemName, itemdesc: selectedDescription, itemloc: selectedLocation, useremail: userEmail) // Consider including the destination in your item model
                             dbHelper.insertItem(item: newItem)
                             alertMessage = "Item submitted successfully."
                             showAlert = true

@@ -7,15 +7,38 @@
 
 import SwiftUI
 
+
+
 struct RequestsManagementPage: View {
+    @ObservedObject private var dbHelper = FireDBHelper.getInstance()
+    
+    
+
+    
     var body: some View {
-        Text("Placeholder")
-        // Implement the logic for managing requests here
+        NavigationView {
+            List(dbHelper.reqItemList, id: \.id){ item in
+                VStack(alignment: .leading) {
+                    Text(item.itemName)
+                        .font(.headline)
+                    Text(item.itemDesc)
+                        .font(.subheadline)
+                    Text("Destination: \(item.itemLoc)") // Display the destination
+                        .font(.caption)
+                        .foregroundColor(.gray)
+
+                }
+                
+            }
+        }
+        .onAppear{
+            dbHelper.retrieveAllReqItems()
+        }
     }
 }
 
-struct RequestsManagementPage_Previews: PreviewProvider {
-    static var previews: some View {
-        RequestsManagementPage()
-    }
-}
+//struct RequestsManagementPage_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RequestsManagementPage()
+//    }
+//}
